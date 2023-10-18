@@ -30,3 +30,7 @@ tasks.withType<org.jetbrains.kotlin.gradle.tasks.KotlinCompile> {
     freeCompilerArgs = freeCompilerArgs + listOf("-opt-in=kotlin.ExperimentalStdlibApi")
   }
 }
+
+secrets {
+  defaultPropertiesFileName = "secrets.properties"
+}
