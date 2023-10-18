@@ -20,6 +20,7 @@ android-hilt = "2.48"
 androidx-appcompat = "1.6.1"
 androidx-core = "1.12.0"
 androidx-constraintlayout = "2.1.4"
+androidx-paging = "3.2.1"
 androidx-startup = "1.1.1"
 androidx-test-ext-junit = "1.1.5"
 androidx-test-espresso-core = "3.5.1"
@@ -50,6 +51,8 @@ android-hilt-runtime = { group = "com.google.dagger", name = "hilt-android", ver
 androidx-appcompat = { group = "androidx.appcompat", name = "appcompat", version.ref = "androidx-appcompat" }
 androidx-core = { group = "androidx.core", name = "core-ktx", version.ref = "androidx-core" }
 androidx-constraintlayout = { group = "androidx.constraintlayout", name = "constraintlayout", version.ref = "androidx-constraintlayout" }
+androidx-paging-runtime = { group = "androidx.paging", name = "paging-runtime", version.ref = "androidx-paging" }
+androidx-paging-common = { group = "androidx.paging", name = "paging-common", version.ref = "androidx-paging" }
 androidx-startup = { group = "androidx.startup", name = "startup-runtime", version.ref = "androidx-startup" }
 androidx-test-ext-junit = { group = "androidx.test.ext", name = "junit", version.ref = "androidx-test-ext-junit" }
 androidx-test-espresso-core = { group = "androidx.test.espresso", name = "espresso-core", version.ref = "androidx-test-espresso-core" }
