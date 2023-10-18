@@ -20,7 +20,6 @@ dependencies {
     projects.domain,
     projects.presentation,
     libs.androidx.core,
-    libs.androidx.appcompat,
     libs.androidx.constraintlayout,
     libs.androidx.startup,
     libs.timber,
