@@ -41,7 +41,7 @@ class TrackListActivity : AppCompatActivity() {
   }
 
   private fun initView() {
-    binding.rvMain.apply {
+    binding.rvTrackList.apply {
       addItemDecoration(DividerItemDecoration(this@TrackListActivity, DividerItemDecoration.VERTICAL))
       adapter = trackAdapter.withLoadStateFooter(
         footer = TrackLoadStateAdapter(
@@ -59,9 +59,9 @@ class TrackListActivity : AppCompatActivity() {
         loadState.append.endOfPaginationReached
 
       binding.apply {
-        tvMainNoResult.isVisible = isListEmpty
-        tvMainNoResult.isVisible = isListEmpty
-        pbMain.isVisible = loadState.refresh is LoadState.Loading
+        binding.tvTrackListNoResult.isVisible = isListEmpty
+        binding.rvTrackList.isVisible = !isListEmpty
+        pbTrackList.isVisible = loadState.refresh is LoadState.Loading
       }
     }
   }
