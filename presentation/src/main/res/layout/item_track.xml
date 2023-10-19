@@ -37,7 +37,7 @@
 
   <TextView
     android:id="@+id/tv_collection_name"
-    style="@style/TextLSemiBold"
+    style="@style/TextLMedium"
     android:layout_width="0dp"
     android:layout_height="wrap_content"
     android:layout_marginStart="12dp"
@@ -50,7 +50,7 @@
 
   <TextView
     android:id="@+id/tv_artiest_name"
-    style="@style/TextMRegular"
+    style="@style/TextXsRegular"
     android:layout_width="0dp"
     android:layout_height="wrap_content"
     android:layout_marginStart="12dp"

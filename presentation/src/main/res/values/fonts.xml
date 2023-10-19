@@ -32,8 +32,8 @@
   <style name="H5">
     <item name="android:fontFamily">@font/pretendard_semibold</item>
     <item name="android:textStyle">normal</item>
-    <item name="android:textSize">24sp</item>
-    <item name="android:lineSpacingExtra">12sp</item>
+    <item name="android:textSize">20sp</item>
+    <item name="android:lineSpacingExtra">10sp</item>
   </style>
 
   <style name="Title">
