@@ -8,18 +8,18 @@ import androidx.paging.LoadState
 import androidx.recyclerview.widget.DividerItemDecoration
 import com.leejihun.watcha.assignment.presentation.adapter.TrackAdapter
 import com.leejihun.watcha.assignment.presentation.adapter.TrackLoadStateAdapter
-import com.leejihun.watcha.assignment.presentation.databinding.ActivityMainBinding
+import com.leejihun.watcha.assignment.presentation.databinding.ActivityTrackListBinding
 import com.leejihun.watcha.assignment.presentation.extensions.repeatOnStarted
 import dagger.hilt.android.AndroidEntryPoint
 import kotlinx.coroutines.flow.collectLatest
 import kotlinx.coroutines.launch
 
 @AndroidEntryPoint
-class MainActivity : AppCompatActivity() {
+class TrackListActivity : AppCompatActivity() {
 
-  private val binding by lazy { ActivityMainBinding.inflate(layoutInflater) }
+  private val binding by lazy { ActivityTrackListBinding.inflate(layoutInflater) }
 
-  private val viewModel by viewModels<MainViewModel>()
+  private val viewModel by viewModels<TrackListViewModel>()
 
   private val trackAdapter by lazy { TrackAdapter() }
 
@@ -34,7 +34,7 @@ class MainActivity : AppCompatActivity() {
 
   private fun initView() {
     binding.rvMain.apply {
-      addItemDecoration(DividerItemDecoration(this@MainActivity, DividerItemDecoration.VERTICAL))
+      addItemDecoration(DividerItemDecoration(this@TrackListActivity, DividerItemDecoration.VERTICAL))
       adapter = trackAdapter.withLoadStateFooter(
         footer = TrackLoadStateAdapter(
           trackAdapter::retry,
