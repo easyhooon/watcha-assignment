@@ -5,9 +5,10 @@ import androidx.paging.PagingState
 import com.leejihun.watcha.assignment.data.model.Track
 import com.leejihun.watcha.assignment.data.service.TrackSearchService
 import com.leejihun.watcha.assignment.data.util.Constants
+import retrofit2.HttpException
 import timber.log.Timber
+import java.io.IOException
 
-@Suppress("TooGenericExceptionCaught")
 class TrackSearchPagingSource(
   private val service: TrackSearchService,
 ) : PagingSource<Int, Track>() {
@@ -37,7 +38,10 @@ class TrackSearchPagingSource(
           nextKey = null,
         )
       }
-    } catch (exception: Exception) {
+    } catch (exception: IOException) {
+      Timber.e(exception)
+      LoadResult.Error(exception)
+    } catch (exception: HttpException) {
       Timber.e(exception)
       LoadResult.Error(exception)
     }
