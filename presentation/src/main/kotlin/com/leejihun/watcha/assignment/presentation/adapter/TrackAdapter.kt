@@ -8,11 +8,12 @@ import com.leejihun.watcha.assignment.domain.entity.TrackEntity
 import com.leejihun.watcha.assignment.presentation.adapter.viewholder.TrackViewHolder
 import com.leejihun.watcha.assignment.presentation.databinding.ItemTrackBinding
 
-class TrackAdapter : PagingDataAdapter<TrackEntity, TrackViewHolder>(TrackDiffCallback) {
+class TrackAdapter(private val onItemClick: (String) -> Unit) : PagingDataAdapter<TrackEntity, TrackViewHolder>(TrackDiffCallback) {
 
   override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): TrackViewHolder {
     return TrackViewHolder(
       ItemTrackBinding.inflate(LayoutInflater.from(parent.context), parent, false),
+      onItemClick,
     )
   }
 

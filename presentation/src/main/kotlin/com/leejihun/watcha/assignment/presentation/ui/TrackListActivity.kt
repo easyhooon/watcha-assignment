@@ -1,5 +1,7 @@
 package com.leejihun.watcha.assignment.presentation.ui
 
+import android.content.Intent
+import android.net.Uri
 import android.os.Bundle
 import androidx.activity.viewModels
 import androidx.appcompat.app.AppCompatActivity
@@ -22,7 +24,12 @@ class TrackListActivity : AppCompatActivity() {
 
   private val viewModel by viewModels<TrackListViewModel>()
 
-  private val trackAdapter by lazy { TrackAdapter() }
+  private val trackAdapter by lazy {
+    TrackAdapter { uri ->
+      val browserIntent = Intent(Intent.ACTION_VIEW, Uri.parse(uri))
+      startActivity(browserIntent)
+    }
+  }
 
   override fun onCreate(savedInstanceState: Bundle?) {
     super.onCreate(savedInstanceState)
