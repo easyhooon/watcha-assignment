@@ -1,6 +1,7 @@
 package com.leejihun.watcha.assignment.data.di
 
 import com.jakewharton.retrofit2.converter.kotlinx.serialization.asConverterFactory
+import com.leejihun.watcha.assignment.data.BuildConfig
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn

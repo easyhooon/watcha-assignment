@@ -17,6 +17,7 @@ dependencies {
   implementations(
     projects.domain,
     libs.kotlinx.serialization.json,
+    libs.androidx.paging.runtime,
     libs.timber,
     libs.bundles.retrofit,
     libs.bundles.okhttp,
