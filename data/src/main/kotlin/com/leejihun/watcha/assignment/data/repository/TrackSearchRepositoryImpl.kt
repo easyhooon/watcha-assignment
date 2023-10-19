@@ -8,11 +8,10 @@ import com.leejihun.watcha.assignment.domain.entity.TrackEntity
 import com.leejihun.watcha.assignment.domain.repository.TrackSearchRepository
 import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.map
-import timber.log.Timber
 import javax.inject.Inject
 
 class TrackSearchRepositoryImpl @Inject constructor(
-  private val dataSource: TrackSearchDataSource
+  private val dataSource: TrackSearchDataSource,
 ) : TrackSearchRepository {
   override fun getTrackList(): Flow<PagingData<TrackEntity>> {
     return dataSource.getTrackList().map { pagingData ->

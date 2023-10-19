@@ -11,8 +11,8 @@ import kotlinx.coroutines.flow.Flow
 import javax.inject.Inject
 
 class TrackSearchDataSourceImpl @Inject constructor(
-  private val service: TrackSearchService
-): TrackSearchDataSource {
+  private val service: TrackSearchService,
+) : TrackSearchDataSource {
   override fun getTrackList(): Flow<PagingData<Track>> {
     val pagingSourceFactory = { TrackSearchPagingSource(service) }
 

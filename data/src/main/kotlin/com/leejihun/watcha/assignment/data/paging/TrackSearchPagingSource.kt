@@ -7,6 +7,7 @@ import com.leejihun.watcha.assignment.data.service.TrackSearchService
 import com.leejihun.watcha.assignment.data.util.Constants
 import timber.log.Timber
 
+@Suppress("TooGenericExceptionCaught")
 class TrackSearchPagingSource(
   private val service: TrackSearchService,
 ) : PagingSource<Int, Track>() {
