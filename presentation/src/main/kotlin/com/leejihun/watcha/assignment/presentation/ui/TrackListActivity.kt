@@ -1,4 +1,4 @@
-package com.leejihun.watcha.assignment.presentation
+package com.leejihun.watcha.assignment.presentation.ui
 
 import android.os.Bundle
 import androidx.activity.viewModels
@@ -6,6 +6,7 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.isVisible
 import androidx.paging.LoadState
 import androidx.recyclerview.widget.DividerItemDecoration
+import com.leejihun.watcha.assignment.presentation.TrackListViewModel
 import com.leejihun.watcha.assignment.presentation.adapter.TrackAdapter
 import com.leejihun.watcha.assignment.presentation.adapter.TrackLoadStateAdapter
 import com.leejihun.watcha.assignment.presentation.databinding.ActivityTrackListBinding
