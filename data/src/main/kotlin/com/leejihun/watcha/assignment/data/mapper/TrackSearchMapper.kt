@@ -10,5 +10,6 @@ internal fun Track.toEntity(): TrackEntity {
     collectionName = collectionName,
     trackName = trackName,
     artworkUrl60 = artworkUrl60,
+    trackViewUrl = trackViewUrl,
   )
 }

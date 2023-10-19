@@ -19,4 +19,7 @@ data class Track(
 
   @SerialName("artworkUrl60")
   val artworkUrl60: String,
+
+  @SerialName("trackViewUrl")
+  val trackViewUrl: String,
 )
