@@ -9,6 +9,10 @@
 
 ![image](https://github.com/easyhooon/watcha-assignment/assets/51016231/970379ba-cf65-4786-9e6b-fa9dab20e24c)
 
+## 요구사항
+- iTunes search API 를 호출하여, 결과 track 들을 리스트로 나열
+- pagination을 구현하여 트랙들을 리스트에 보여주어야 함
+
 ## Features
 
 |트랙 리스트 조회|네트워크 에러 처리|
@@ -21,7 +25,7 @@
 
 ## Development
 
-### Required
+### Environment
 
 - IDE : Android Studio Giraffe
 - JDK : Java 17을 실행할 수 있는 JDK
