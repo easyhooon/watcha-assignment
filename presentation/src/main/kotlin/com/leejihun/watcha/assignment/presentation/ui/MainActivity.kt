@@ -23,12 +23,12 @@ class MainActivity : AppCompatActivity() {
   private fun initListener() {
     binding.btnSearchView.setOnClickListener {
       startActivityWithAnimation<TrackListViewActivity>(
-        withFinish = false
+        withFinish = false,
       )
     }
     binding.btnSearchCompose.setOnClickListener {
       startActivityWithAnimation<TrackListComposeActivity>(
-        withFinish = false
+        withFinish = false,
       )
     }
   }

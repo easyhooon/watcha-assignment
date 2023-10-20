@@ -39,7 +39,7 @@ fun ErrorScreen(
       Button(onClick = onClickRetryButton) {
         Text(
           text = stringResource(id = R.string.retry),
-          style = TextStyle(fontSize = 16.sp)
+          style = TextStyle(fontSize = 16.sp),
         )
       }
     }
