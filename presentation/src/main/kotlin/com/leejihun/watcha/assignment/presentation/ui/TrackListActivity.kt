@@ -15,6 +15,7 @@ import com.leejihun.watcha.assignment.presentation.databinding.ActivityTrackList
 import com.leejihun.watcha.assignment.presentation.extensions.repeatOnStarted
 import dagger.hilt.android.AndroidEntryPoint
 import kotlinx.coroutines.flow.collectLatest
+import kotlinx.coroutines.flow.distinctUntilChangedBy
 import kotlinx.coroutines.launch
 
 @AndroidEntryPoint
@@ -52,17 +53,8 @@ class TrackListActivity : AppCompatActivity() {
   }
 
   private fun initListener() {
-    trackAdapter.addLoadStateListener { combinedLoadStates ->
-      val loadState = combinedLoadStates.source
-      val isListEmpty = trackAdapter.itemCount < 1 &&
-        loadState.refresh is LoadState.NotLoading &&
-        loadState.append.endOfPaginationReached
-
-      binding.apply {
-        binding.tvTrackListNoResult.isVisible = isListEmpty
-        binding.rvTrackList.isVisible = !isListEmpty
-        pbTrackList.isVisible = loadState.refresh is LoadState.Loading
-      }
+    binding.btnTrackListRetry.setOnClickListener {
+      viewModel.refresh()
     }
   }
 
@@ -71,6 +63,35 @@ class TrackListActivity : AppCompatActivity() {
       launch {
         viewModel.trackList.collectLatest {
           trackAdapter.submitData(it)
+        }
+      }
+
+      launch {
+        trackAdapter.loadStateFlow
+          .distinctUntilChangedBy { it.refresh }
+          .collect { loadStates ->
+            val loadState = loadStates.source
+
+            val isListEmpty = trackAdapter.itemCount < 1 &&
+              loadState.refresh is LoadState.NotLoading &&
+              loadState.append.endOfPaginationReached
+
+            val isError = loadState.refresh is LoadState.Error
+
+            binding.apply {
+              pbTrackList.isVisible = loadState.refresh is LoadState.Loading
+              tvTrackListNoResult.isVisible = isListEmpty
+              rvTrackList.isVisible = !isListEmpty
+
+              tvTrackListError.isVisible = isError
+              btnTrackListRetry.isVisible = isError
+            }
+          }
+      }
+
+      launch {
+        viewModel.refreshClickEvent.collect {
+          trackAdapter.retry()
         }
       }
     }
