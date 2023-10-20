@@ -40,7 +40,7 @@
 - AndroidX
   - Activity
   - Core
-  - Constraintlayout
+  - ConstraintLayout
   - Lifecycle & AAC ViewModel
   - Material3
   - StartUp
