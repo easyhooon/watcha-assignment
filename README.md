@@ -65,12 +65,25 @@
 ## Package Structure
 ```
 ├── app
-│   └── Application
+│   └── application
 ├── build-logic
 ├── buildSrc
 ├── data
+│   ├── datasource
+│   ├── di
+│   ├── mapper
+│   ├── model
+│   ├── paging
+│   ├── repository
+│   ├── paging
+│   └── servce
 ├── domain
+│   ├── entity
+│   ├── repository
+│   └── usecase
 ├── presentation
+│   ├── ui
+│   └── viewmodel
 └── gradle
     └── libs.versions.toml
 ```
