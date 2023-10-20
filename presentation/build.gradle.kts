@@ -2,6 +2,7 @@
 
 plugins {
   watcha("android-library")
+  watcha("android-compose")
   watcha("android-hilt")
 }
 
@@ -28,5 +29,6 @@ dependencies {
     libs.androidx.paging.runtime,
     libs.coil,
     libs.timber,
+    libs.bundles.androidx.compose,
   )
 }

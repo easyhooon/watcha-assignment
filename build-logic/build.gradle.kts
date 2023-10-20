@@ -10,8 +10,9 @@ gradlePlugin {
   val pluginClasses = listOf(
     "AndroidApplicationPlugin" to "android-application",
     "AndroidLibraryPlugin" to "android-library",
-    "JvmKotlinPlugin" to "jvm-kotlin",
+    "AndroidComposePlugin" to "android-compose",
     "AndroidHiltPlugin" to "android-hilt",
+    "JvmKotlinPlugin" to "jvm-kotlin",
   )
 
   plugins {
