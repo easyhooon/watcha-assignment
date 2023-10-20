@@ -44,6 +44,7 @@ class TrackListViewActivity : AppCompatActivity() {
 
   private fun initView() {
     binding.rvTrackList.apply {
+      setHasFixedSize(true)
       adapter = trackAdapter.withLoadStateFooter(
         footer = TrackLoadStateAdapter(
           trackAdapter::retry,
