@@ -22,8 +22,6 @@ dependencies {
     libs.bundles.retrofit,
     libs.bundles.okhttp,
   )
-  testImplementation(libs.junit)
-  androidTestImplementation(libs.androidx.test.ext.junit)
 }
 
 tasks.withType<org.jetbrains.kotlin.gradle.tasks.KotlinCompile> {
