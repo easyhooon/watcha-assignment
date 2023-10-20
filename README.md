@@ -40,7 +40,8 @@
 - AndroidX
   - Activity
   - Core
-  - Lifecycle & ViewModel
+  - Constraintlayout
+  - Lifecycle & AAC ViewModel
   - Material3
   - StartUp
   - Splash
