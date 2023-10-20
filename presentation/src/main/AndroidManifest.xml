@@ -4,8 +4,9 @@
   <application android:theme="@style/Theme.Watchaassignment">
 
     <activity
-      android:name="MainActivity"
-      android:exported="true">
+      android:name=".ui.IntroActivity"
+      android:exported="true"
+      android:theme="@style/Theme.Watchaassignment.Splash">
 
       <intent-filter>
         <action android:name="android.intent.action.MAIN" />
@@ -14,6 +15,10 @@
       </intent-filter>
 
     </activity>
+
+    <activity
+      android:name=".ui.TrackListActivity"
+      android:exported="false"/>
 
   </application>
 

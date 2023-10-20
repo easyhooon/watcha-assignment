@@ -1,1 +1,8 @@
-<resources />
+<resources>
+  <string name="app_name">iTunes</string>
+  <string name="retry">다시 시도</string>
+  <string name="no_result">결과가 존재하지 않습니다</string>
+  <string name="error_message">트랙을 조회할 수 없습니다</string>
+  <string name="app_logo">Logo</string>
+
+</resources>

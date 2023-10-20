@@ -1,7 +1,16 @@
 <resources>
-    <style name="Theme.Watchaassignment" parent="Theme.Material3.Light.NoActionBar">
-      <!-- Status bar color. -->
-      <item name="android:statusBarColor">@android:color/transparent</item>
-      <item name="android:windowLightStatusBar">true</item>
-    </style>
+
+  <style name="Theme.Watchaassignment.Splash" parent="Theme.SplashScreen">
+    <item name="windowSplashScreenBackground">@color/white</item>
+    <item name="windowSplashScreenAnimatedIcon">@drawable/ic_dummy_splash</item>
+    <item name="postSplashScreenTheme">@style/Theme.Watchaassignment</item>
+
+  </style>
+
+  <style name="Theme.Watchaassignment" parent="Theme.Material3.Light.NoActionBar">
+    <item name="android:statusBarColor">@android:color/transparent</item>
+    <item name="android:windowLightStatusBar">true</item>
+
+  </style>
+
 </resources>
