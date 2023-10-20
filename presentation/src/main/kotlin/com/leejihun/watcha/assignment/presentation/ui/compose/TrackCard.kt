@@ -67,12 +67,16 @@ fun TrackCard(
       Text(
         text = track.collectionName,
         style = TextLMedium,
+        maxLines = 2,
+        overflow = TextOverflow.Ellipsis,
         color = Gray900,
       )
       Spacer(Modifier.height(8.dp))
       Text(
         text = track.artistName,
         style = TextXsRegular,
+        maxLines = 1,
+        overflow = TextOverflow.Ellipsis,
         color = Gray900,
       )
     }
