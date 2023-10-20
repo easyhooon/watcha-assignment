@@ -55,5 +55,3 @@ keystore.properties
 
 # Secrets
 secrets.properties
-
-.run/
