@@ -67,6 +67,16 @@ internal class JvmKotlinPlugin : BuildLogicPlugin({
   dependencies.add("detektPlugins", libs.findLibrary("detekt-plugin-formatting").get())
 })
 
+internal class AndroidComposePlugin : BuildLogicPlugin({
+  extensions.configure<com.android.build.gradle.BaseExtension> {
+    buildFeatures.compose = true
+
+    composeOptions {
+      kotlinCompilerExtensionVersion = libs.findVersion("androidx-compose-compiler").get().toString()
+    }
+  }
+})
+
 internal class AndroidHiltPlugin : BuildLogicPlugin({
   applyPlugins(
     libs.findPlugin("android-hilt").get().get().pluginId,
