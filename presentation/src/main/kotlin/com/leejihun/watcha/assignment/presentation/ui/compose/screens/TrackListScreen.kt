@@ -1,7 +1,10 @@
 package com.leejihun.watcha.assignment.presentation.ui.compose.screens
 
+import android.content.Intent
+import android.net.Uri
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.runtime.Composable
+import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.res.stringResource
 import androidx.paging.LoadState
 import androidx.paging.compose.LazyPagingItems
@@ -16,6 +19,8 @@ import com.leejihun.watcha.assignment.presentation.ui.compose.components.TrackCa
 fun TrackListScreen(
   trackItems: LazyPagingItems<TrackEntity>,
 ) {
+  val context = LocalContext.current
+
   val isLoading = trackItems.loadState.refresh is LoadState.Loading
   val isError = trackItems.loadState.refresh is LoadState.Error
 
@@ -41,7 +46,10 @@ fun TrackListScreen(
           trackItems[index]?.let { track ->
             TrackCard(
               track = track,
-              onClick = {},
+              onClick = {
+                val browserIntent = Intent(Intent.ACTION_VIEW, Uri.parse(track.trackViewUrl))
+                context.startActivity(browserIntent)
+              },
             )
           }
         }
