@@ -1,3 +1,11 @@
+# How to build
+빌드 전, 프로젝트에 최상위 루트에 'secrets.properties' 파일을 생성하여 다음과 같이 API_BASE_URL 값을 추가해야 합니다.
+```
+# secrets.properties
+
+API_BASE_URL ="https://itunes.apple.com/"
+```
+
 # 왓챠 Android 개발자 과제
 
 [![Kotlin](https://img.shields.io/badge/Kotlin-1.9.0-blue.svg)](https://kotlinlang.org)
@@ -11,14 +19,7 @@
 
 ## 요구사항
 - iTunes search API 를 호출하여, 결과 track 들을 리스트로 나열
-- pagination을 구현하여 트랙들을 리스트에 보여주어야 함
-
-## How to build
-빌드 전, 'secrets.properties' 파일을 생성하여 다음과 같이 API_BASE_URL 값을 추가해야 합니다.
-```
-# secrets.properties
-API_BASE_URL ="https://itunes.apple.com/"
-```
+- Pagination을 구현하여 트랙들을 리스트에 보여주어야 함
 
 ## Features
 
@@ -44,7 +45,7 @@ API_BASE_URL ="https://itunes.apple.com/"
 
 ### Libraries
 
-- AndroidX
+- Androidx
   - Activity
   - Core
   - ConstraintLayout
@@ -54,7 +55,9 @@ API_BASE_URL ="https://itunes.apple.com/"
   - Splash
   - Paging3
 
-- Kotlin Libraries (Coroutine, Serialization)
+- Kotlinx
+  - Coroutines
+  - Serialization
 
 - Dagger Hilt
 - Retrofit2
