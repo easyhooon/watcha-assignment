@@ -7,7 +7,7 @@
   tools:context=".ui.TrackListActivity">
 
   <androidx.recyclerview.widget.RecyclerView
-    android:id="@+id/rv_main"
+    android:id="@+id/rv_track_list"
     android:layout_width="0dp"
     android:layout_height="0dp"
     app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
@@ -18,7 +18,7 @@
     tools:listitem="@layout/item_track" />
 
   <ProgressBar
-    android:id="@+id/pb_main"
+    android:id="@+id/pb_track_list"
     android:layout_width="0dp"
     android:layout_height="wrap_content"
     android:visibility="invisible"
@@ -27,19 +27,8 @@
     app:layout_constraintStart_toStartOf="parent"
     app:layout_constraintTop_toTopOf="parent" />
 
-  <Button
-    android:id="@+id/btn_main_retry"
-    android:layout_width="wrap_content"
-    android:layout_height="wrap_content"
-    android:text="@string/retry"
-    android:visibility="invisible"
-    app:layout_constraintBottom_toBottomOf="parent"
-    app:layout_constraintEnd_toEndOf="parent"
-    app:layout_constraintStart_toStartOf="parent"
-    app:layout_constraintTop_toTopOf="parent" />
-
   <TextView
-    android:id="@+id/tv_main_no_result"
+    android:id="@+id/tv_track_list_no_result"
     android:layout_width="0dp"
     android:layout_height="wrap_content"
     android:gravity="center"
@@ -50,5 +39,31 @@
     app:layout_constraintEnd_toEndOf="parent"
     app:layout_constraintStart_toStartOf="parent"
     app:layout_constraintTop_toTopOf="parent" />
+
+  <TextView
+    android:id="@+id/tv_track_list_error"
+    style="@style/Title"
+    android:layout_width="0dp"
+    android:layout_height="wrap_content"
+    android:gravity="center"
+    android:text="@string/error_message"
+    android:textSize="24sp"
+    android:visibility="gone"
+    app:layout_constraintBottom_toBottomOf="parent"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toTopOf="parent" />
+
+  <Button
+    android:id="@+id/btn_track_list_retry"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="16dp"
+    android:text="@string/retry"
+    android:textSize="16sp"
+    android:visibility="invisible"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toBottomOf="@id/tv_track_list_error" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
