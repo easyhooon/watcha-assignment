@@ -11,6 +11,14 @@
 
 ## Features
 
+|트랙 리스트 조회|네트워크 에러 처리|
+|:-----:|:-----:|
+|<img width="320" src="https://github.com/easyhooon/watcha-assignment/assets/51016231/674c342c-aa4f-437b-a9c5-28fbd7b1c809.gif">|<img width="320" src="https://github.com/easyhooon/watcha-assignment/assets/51016231/201cbdd4-dd96-443b-b18a-731fcf9ae378.gif">|
+
+|트랙 리스트 갱신|트랙 상세 화면|
+|:-----:|:-----:|
+|<img width="320" src="https://github.com/easyhooon/watcha-assignment/assets/51016231/1869ee54-6b3d-4854-bfbb-205e992cfee7.gif">|<img width="320" src="https://github.com/easyhooon/watcha-assignment/assets/51016231/ec4f7880-6821-46d8-bed5-7340267b53e4.gif">|
+
 ## Development
 
 ### Required
