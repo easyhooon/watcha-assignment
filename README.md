@@ -46,14 +46,15 @@ API_BASE_URL ="https://itunes.apple.com/"
 ### Libraries
 
 - Androidx
-  - Activity
+  - Activity & Activity Compose
+  - AppCompat
   - Core
   - ConstraintLayout
-  - Lifecycle & AAC ViewModel
+  - Lifecycle & AAC ViewModel Compose
   - Material3
   - StartUp
   - Splash
-  - Paging3
+  - Paging3 & Paging3 Compose
 
 - Kotlinx
   - Coroutines
@@ -63,7 +64,7 @@ API_BASE_URL ="https://itunes.apple.com/"
 - Retrofit2
 - OkHttp3
 - Timber
-- Coil
+- Coil & Coil Compose
 
 #### Code analysis
 
@@ -72,7 +73,7 @@ API_BASE_URL ="https://itunes.apple.com/"
 
 #### Gradle Dependency
 
-- Gradle Version Catalog
+- [Gradle Version Catalog](https://docs.gradle.org/current/userguide/platforms.html)
 
 ## Architecture
 Based on [Google App Architecture](https://developer.android.com/topic/architecture) similar to Clean Architecture
@@ -102,6 +103,8 @@ Based on [Google App Architecture](https://developer.android.com/topic/architect
 │   └── usecase
 ├── presentation
 │   ├── ui
+│   │   ├── compose
+│   │   └── view
 │   └── viewmodel
 └── gradle
     └── libs.versions.toml
