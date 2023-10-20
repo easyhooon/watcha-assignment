@@ -13,6 +13,13 @@
 - iTunes search API 를 호출하여, 결과 track 들을 리스트로 나열
 - pagination을 구현하여 트랙들을 리스트에 보여주어야 함
 
+## How to build
+빌드 전, 'secrets.properties' 파일을 생성하여 다음과 같이 API_BASE_URL 값을 추가해야 합니다.
+```
+# secrets.properties
+API_BASE_URL ="https://itunes.apple.com/"
+```
+
 ## Features
 
 |트랙 리스트 조회|네트워크 에러 처리|
