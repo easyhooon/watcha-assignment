@@ -10,7 +10,8 @@ import androidx.paging.compose.itemContentType
 import androidx.paging.compose.itemKey
 import com.leejihun.watcha.assignment.domain.entity.TrackEntity
 import com.leejihun.watcha.assignment.presentation.R
-import com.leejihun.watcha.assignment.presentation.ui.compose.TrackCard
+import com.leejihun.watcha.assignment.presentation.ui.compose.components.LoadStateFooter
+import com.leejihun.watcha.assignment.presentation.ui.compose.components.TrackCard
 
 @Composable
 fun TrackListScreen(
@@ -46,6 +47,13 @@ fun TrackListScreen(
               onClick = {},
             )
           }
+        }
+
+        item {
+          LoadStateFooter(
+            loadState = trackItems.loadState.append,
+            onRetry = { trackItems.retry() },
+          )
         }
       }
     }

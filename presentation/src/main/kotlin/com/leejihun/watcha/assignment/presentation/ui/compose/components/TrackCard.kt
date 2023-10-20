@@ -1,4 +1,4 @@
-package com.leejihun.watcha.assignment.presentation.ui.compose
+package com.leejihun.watcha.assignment.presentation.ui.compose.components
 
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Column
