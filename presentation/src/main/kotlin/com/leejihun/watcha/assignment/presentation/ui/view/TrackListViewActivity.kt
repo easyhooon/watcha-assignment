@@ -1,4 +1,4 @@
-package com.leejihun.watcha.assignment.presentation.ui
+package com.leejihun.watcha.assignment.presentation.ui.view
 
 import android.content.Intent
 import android.net.Uri
@@ -19,7 +19,7 @@ import kotlinx.coroutines.flow.distinctUntilChangedBy
 import kotlinx.coroutines.launch
 
 @AndroidEntryPoint
-class TrackListActivity : AppCompatActivity() {
+class TrackListViewActivity : AppCompatActivity() {
 
   private val binding by lazy { ActivityTrackListBinding.inflate(layoutInflater) }
 
@@ -43,7 +43,7 @@ class TrackListActivity : AppCompatActivity() {
 
   private fun initView() {
     binding.rvTrackList.apply {
-      addItemDecoration(DividerItemDecoration(this@TrackListActivity, DividerItemDecoration.VERTICAL))
+      addItemDecoration(DividerItemDecoration(this@TrackListViewActivity, DividerItemDecoration.VERTICAL))
       adapter = trackAdapter.withLoadStateFooter(
         footer = TrackLoadStateAdapter(
           trackAdapter::retry,

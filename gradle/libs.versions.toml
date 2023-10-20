@@ -122,6 +122,7 @@ okhttp = [
 ]
 
 androidx-compose = [
+  "androidx-activity-compose",
   "androidx-compose-animation",
   "androidx-compose-foundation",
   "androidx-compose-foundation-layout",
@@ -131,4 +132,11 @@ androidx-compose = [
   "androidx-compose-runtime-tracing",
   "androidx-compose-ui-tooling-preview",
   "androidx-compose-ui-util",
+]
+
+androidx-lifecycle = [
+  "androidx-lifecycle-runtime",
+  "androidx-lifecycle-viewmodel",
+  "androidx-lifecycle-runtime-compose",
+  "androidx-lifecycle-viewmodel-compose",
 ]

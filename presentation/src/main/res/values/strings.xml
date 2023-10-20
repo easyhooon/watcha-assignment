@@ -4,5 +4,7 @@
   <string name="no_result">결과가 존재하지 않습니다</string>
   <string name="error_message">트랙을 조회할 수 없습니다</string>
   <string name="app_logo">Logo</string>
+  <string name="view">View</string>
+  <string name="compose">Compose</string>
 
 </resources>

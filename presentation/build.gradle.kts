@@ -23,12 +23,11 @@ dependencies {
     libs.androidx.appcompat,
     libs.androidx.core,
     libs.androidx.constraintlayout,
-    libs.androidx.lifecycle.runtime,
-    libs.androidx.lifecycle.viewmodel,
     libs.androidx.splash,
     libs.androidx.paging.runtime,
     libs.coil,
     libs.timber,
     libs.bundles.androidx.compose,
+    libs.bundles.androidx.lifecycle,
   )
 }
