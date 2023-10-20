@@ -14,8 +14,4 @@
   <color name="gray_800">#1f2937</color>
   <color name="gray_900">#111827</color>
 
-  <color name="teal_500">#14b8a6</color>
-  <color name="teal_600">#0d9488</color>
-
-  <color name="error_500">#ef4444</color>
 </resources>
