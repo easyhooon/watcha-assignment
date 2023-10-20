@@ -1,7 +1,6 @@
 package com.leejihun.watcha.assignment.presentation.ui.compose.screens
 
 import androidx.compose.foundation.lazy.LazyColumn
-import androidx.compose.foundation.lazy.rememberLazyListState
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.res.stringResource
 import androidx.paging.LoadState
@@ -17,8 +16,6 @@ import com.leejihun.watcha.assignment.presentation.ui.compose.components.TrackCa
 fun TrackListScreen(
   trackItems: LazyPagingItems<TrackEntity>,
 ) {
-  val listState = rememberLazyListState()
-
   val isLoading = trackItems.loadState.refresh is LoadState.Loading
   val isError = trackItems.loadState.refresh is LoadState.Error
 
@@ -35,7 +32,7 @@ fun TrackListScreen(
     }
 
     else -> {
-      LazyColumn(state = listState) {
+      LazyColumn {
         items(
           count = trackItems.itemCount,
           key = trackItems.itemKey(key = { track -> track.trackId }),
