@@ -4,6 +4,7 @@ import android.content.Intent
 import android.net.Uri
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.lazy.LazyColumn
+import androidx.compose.material3.HorizontalDivider
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.platform.LocalContext
@@ -14,6 +15,7 @@ import androidx.paging.compose.itemKey
 import com.leejihun.watcha.assignment.domain.entity.TrackEntity
 import com.leejihun.watcha.assignment.presentation.ui.compose.components.LoadStateFooter
 import com.leejihun.watcha.assignment.presentation.ui.compose.components.TrackCard
+import com.leejihun.watcha.assignment.presentation.ui.compose.theme.Gray300
 
 @Composable
 fun TrackListScreen(
@@ -49,6 +51,8 @@ fun TrackListScreen(
                 context.startActivity(browserIntent)
               },
             )
+
+            HorizontalDivider(color = Gray300)
           }
         }
 

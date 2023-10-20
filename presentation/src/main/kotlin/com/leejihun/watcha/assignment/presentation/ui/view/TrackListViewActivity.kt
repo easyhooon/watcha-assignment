@@ -7,11 +7,12 @@ import androidx.activity.viewModels
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.isVisible
 import androidx.paging.LoadState
-import androidx.recyclerview.widget.DividerItemDecoration
+import com.leejihun.watcha.assignment.presentation.R
 import com.leejihun.watcha.assignment.presentation.TrackListViewModel
 import com.leejihun.watcha.assignment.presentation.adapter.TrackAdapter
 import com.leejihun.watcha.assignment.presentation.adapter.TrackLoadStateAdapter
 import com.leejihun.watcha.assignment.presentation.databinding.ActivityTrackListBinding
+import com.leejihun.watcha.assignment.presentation.extensions.addDivider
 import com.leejihun.watcha.assignment.presentation.extensions.repeatOnStarted
 import dagger.hilt.android.AndroidEntryPoint
 import kotlinx.coroutines.flow.collectLatest
@@ -43,12 +44,12 @@ class TrackListViewActivity : AppCompatActivity() {
 
   private fun initView() {
     binding.rvTrackList.apply {
-      addItemDecoration(DividerItemDecoration(this@TrackListViewActivity, DividerItemDecoration.VERTICAL))
       adapter = trackAdapter.withLoadStateFooter(
         footer = TrackLoadStateAdapter(
           trackAdapter::retry,
         ),
       )
+      addDivider(R.color.gray_300)
     }
   }
 
