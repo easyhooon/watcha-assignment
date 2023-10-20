@@ -29,9 +29,4 @@ dependencies {
     libs.coil,
     libs.timber,
   )
-  testImplementation(libs.junit)
-  androidTestImplementations(
-    libs.androidx.test.ext.junit,
-    libs.androidx.test.espresso.core,
-  )
 }
