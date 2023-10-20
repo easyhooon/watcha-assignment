@@ -25,9 +25,9 @@ dependencies {
     libs.androidx.constraintlayout,
     libs.androidx.splash,
     libs.androidx.paging.runtime,
-    libs.coil,
     libs.timber,
     libs.bundles.androidx.compose,
     libs.bundles.androidx.lifecycle,
+    libs.bundles.coil,
   )
 }

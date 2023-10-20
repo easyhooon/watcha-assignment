@@ -6,5 +6,6 @@
   <string name="app_logo">Logo</string>
   <string name="view">View</string>
   <string name="compose">Compose</string>
+  <string name="artwork_image">ArtWork Image</string>
 
 </resources>
