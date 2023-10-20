@@ -21,7 +21,7 @@ class IntroActivity : AppCompatActivity() {
     setContentView(binding.root)
 
     Handler(Looper.getMainLooper()).postDelayed(
-      { startActivityWithAnimation<TrackListActivity>() },
+      { startActivityWithAnimation<MainActivity>() },
       SPLASH_DISPLAY_LENGTH,
     )
   }

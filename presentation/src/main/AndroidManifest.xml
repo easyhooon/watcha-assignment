@@ -2,7 +2,6 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android">
 
   <application android:theme="@style/Theme.Watchaassignment">
-
     <activity
       android:name=".ui.IntroActivity"
       android:exported="true"
@@ -17,8 +16,16 @@
     </activity>
 
     <activity
-      android:name=".ui.TrackListActivity"
-      android:exported="false"/>
+      android:name=".ui.MainActivity"
+      android:exported="false" />
+
+    <activity
+      android:name=".ui.view.TrackListViewActivity"
+      android:exported="false" />
+
+    <activity
+      android:name=".ui.compose.TrackListComposeActivity"
+      android:exported="false" />
 
   </application>
 
