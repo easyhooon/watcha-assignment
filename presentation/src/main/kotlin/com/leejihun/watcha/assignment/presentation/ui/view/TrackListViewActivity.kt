@@ -9,8 +9,8 @@ import androidx.core.view.isVisible
 import androidx.paging.LoadState
 import com.leejihun.watcha.assignment.presentation.R
 import com.leejihun.watcha.assignment.presentation.TrackListViewModel
-import com.leejihun.watcha.assignment.presentation.adapter.TrackAdapter
-import com.leejihun.watcha.assignment.presentation.adapter.TrackLoadStateAdapter
+import com.leejihun.watcha.assignment.presentation.ui.view.adapter.TrackAdapter
+import com.leejihun.watcha.assignment.presentation.ui.view.adapter.TrackLoadStateAdapter
 import com.leejihun.watcha.assignment.presentation.databinding.ActivityTrackListBinding
 import com.leejihun.watcha.assignment.presentation.extensions.addDivider
 import com.leejihun.watcha.assignment.presentation.extensions.repeatOnStarted

@@ -1,10 +1,10 @@
-package com.leejihun.watcha.assignment.presentation.adapter
+package com.leejihun.watcha.assignment.presentation.ui.view.adapter
 
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.paging.LoadState
 import androidx.paging.LoadStateAdapter
-import com.leejihun.watcha.assignment.presentation.adapter.viewholder.TrackLoadStateViewHolder
+import com.leejihun.watcha.assignment.presentation.ui.view.adapter.viewholder.TrackLoadStateViewHolder
 import com.leejihun.watcha.assignment.presentation.databinding.ItemTrackLoadStateBinding
 
 class TrackLoadStateAdapter(private val retry: () -> Unit) :

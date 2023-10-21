@@ -7,5 +7,6 @@
   <string name="view">View</string>
   <string name="compose">Compose</string>
   <string name="artwork_image">ArtWork Image</string>
+  <string name="end_message">모든 트랙을 조회 하였습니다</string>
 
 </resources>
