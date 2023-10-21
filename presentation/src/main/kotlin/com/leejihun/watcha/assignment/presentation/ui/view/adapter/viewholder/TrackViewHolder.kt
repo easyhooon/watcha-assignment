@@ -1,4 +1,4 @@
-package com.leejihun.watcha.assignment.presentation.adapter.viewholder
+package com.leejihun.watcha.assignment.presentation.ui.view.adapter.viewholder
 
 import androidx.recyclerview.widget.RecyclerView
 import coil.load
