@@ -10,6 +10,6 @@ interface TrackSearchService {
   suspend fun getTrackList(
     @Query("term") term: String = "greenday",
     @Query("entity") entity: String = "song",
-    @Query("limit") limit: Int = 30,
+    @Query("limit") limit: Int,
   ): TrackSearchResponse
 }

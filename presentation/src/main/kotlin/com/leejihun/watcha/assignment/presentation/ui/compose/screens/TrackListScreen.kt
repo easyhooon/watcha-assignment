@@ -59,7 +59,7 @@ fun TrackListScreen(
         item {
           LoadStateFooter(
             loadState = trackItems.loadState.append,
-            onRetry = { trackItems.retry() },
+            onRetryClick = { trackItems.retry() },
           )
         }
       }

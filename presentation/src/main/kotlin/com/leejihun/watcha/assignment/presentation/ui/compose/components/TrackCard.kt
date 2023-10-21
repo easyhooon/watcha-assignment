@@ -42,7 +42,7 @@ fun TrackCard(
   ) {
     AsyncImage(
       modifier = Modifier
-        .size(120.dp, 120.dp)
+        .size(width = 160.dp, height = 160.dp)
         .padding(8.dp)
         .clip(RoundedCornerShape(8.dp)),
       model = ImageRequest.Builder(context)

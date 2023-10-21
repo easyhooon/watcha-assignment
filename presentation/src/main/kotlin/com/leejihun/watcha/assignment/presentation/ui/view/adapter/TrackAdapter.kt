@@ -1,11 +1,11 @@
-package com.leejihun.watcha.assignment.presentation.adapter
+package com.leejihun.watcha.assignment.presentation.ui.view.adapter
 
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.paging.PagingDataAdapter
 import androidx.recyclerview.widget.DiffUtil
 import com.leejihun.watcha.assignment.domain.entity.TrackEntity
-import com.leejihun.watcha.assignment.presentation.adapter.viewholder.TrackViewHolder
+import com.leejihun.watcha.assignment.presentation.ui.view.adapter.viewholder.TrackViewHolder
 import com.leejihun.watcha.assignment.presentation.databinding.ItemTrackBinding
 
 class TrackAdapter(private val onItemClick: (String) -> Unit) : PagingDataAdapter<TrackEntity, TrackViewHolder>(TrackDiffCallback) {

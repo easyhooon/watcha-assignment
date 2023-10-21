@@ -20,7 +20,6 @@ class TrackSearchDataSourceImpl @Inject constructor(
       config = PagingConfig(
         pageSize = Constants.PAGING_SIZE,
         enablePlaceholders = false,
-        maxSize = Constants.PAGING_SIZE * 3,
       ),
       pagingSourceFactory = pagingSourceFactory,
     ).flow
